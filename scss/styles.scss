@@ -275,13 +275,58 @@ span.note{
 }
 
 section.contact{
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
   position: relative;
   display: block;
+  height: 140px;
+  padding-top: 40px;
   article {
     width: 50%;
     height: auto;
     display: inline-block;
-  
+    float: left;
+    &:last-of-type{
+      float: right;
+    }
   }
+}
+
+h3 {
+  color: $black;
+  font: {
+    size: 16px;
+    weight: 300;
+  }
+  @include roboto;
+  text: {
+    align: left;
+  }
+  width: 60%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+footer
+{
+  background-color: $black;
+  padding: 10px 30px 10px 30px;
+  position: relative;
+  display: block;
+  margin-top: 40px;
+}
+
+span.footer-span{
+  color: $white;
+  font: {
+    size: 10px;
+    weight: 300;
+  }
+  letter-spacing: 2px;
+  @include roboto;
+  text: {
+    align: left;
+    transform: uppercase;
+  }
+  display: block;
 }
