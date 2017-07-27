@@ -1,0 +1,287 @@
+// COLORS
+$white: #ffffff;
+$black: #000000;
+$skyblue: #337AB7;
+$green: #4CA44B;
+
+
+// AUX MIXINGS
+
+@mixin cero{
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@mixin animate
+{
+  transition: all 0.25s ease-in-out;
+}
+
+@mixin roboto
+{
+  font-family: "Roboto", Helvetica, Tahoma, Arial, clean, sans-serif;
+}
+ 
+// CUSTOM RESETS AND OTHER PROPERITIES 
+html, body
+{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include roboto;
+}
+
+ul, li, h1, h2, h3, p, span
+{ 
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  @include cero;
+  text: 
+  {
+    decoration: inherit;
+    decoration: none;
+    shadow: none;
+    indent: none;
+  }
+  list-style-type: none;
+  &:hover, &:active, &:visited, &:focus
+  {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-box: none;
+  }
+}
+
+/*ESTILOS PARA HEADER */
+
+header{
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  display: block;
+  background: {
+    color: $black;
+    image: url("../images/bg.jpeg");
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+}
+
+h1.call-to-action{
+  display: block;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  color: $white;
+  font: {
+    size: 32px;
+    weight: 300;
+  }
+  margin: 0 auto;
+  width: 400px;
+  padding-top: 15vh;
+}
+
+.wrapper-buttons{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 300px;
+  margin-top: 20px;
+}
+
+button.button-call {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  height: 35px;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $skyblue;
+  cursor: pointer;
+  color: $white;
+  font: {
+    size: 14px;
+    weight: 500;
+  }
+  @include animate;
+  &:hover {
+    background-color: lighten($skyblue, 10%);
+  }
+  &:nth-of-type(2){
+    margin-left: 10px;
+    background-color: $green;
+    &:hover {
+      background-color: lighten($green, 10%);
+    }
+  }
+}
+
+p.lead{
+  display: block;
+  font: {
+    size: 12px;
+    weight: 400;
+  }
+  color: $white;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.logo-desafio-big{
+  width: 150px;
+  height: auto;
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  img {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
+
+nav{
+  display: block;
+  position: absolute;
+  right: 10%;
+  top: 40px;
+  ul {
+    display: block;
+    height: auto;
+    position: relative;
+    li {
+      width: auto;
+      display: inline-block;
+      color: gray;
+      font: {
+        size: 12px;
+        weight: 400;
+      }
+      text-align: right;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-right: 20px;
+      a {
+        color: gray;
+        @include roboto;
+        text-decoration: none;
+        @include animate;
+        &:hover 
+        {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+section.description {
+  width: 100%;
+  display: block;
+  position: relative;
+  height: auto;
+  background-color: $white;
+}
+
+h2 {
+  color: $black;
+  font: {
+    size: 22px;
+    weight: 600;
+  }
+  @include roboto;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  display: block;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+p.default-paragraph {
+  color: $black;
+  font: {
+    size: 12px;
+    weight: 400;
+  }
+  line-height: 20px;
+  @include roboto;
+  text: {
+    align: center;
+  }
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+img.people{
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 80px;
+}
+
+section.join{
+  background-color: lighten(gray, 45%);
+  padding-top: 0px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+  width: 90%;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  p.default-paragraph {
+    margin-top: 10px;
+  }
+  button.button-call{
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+span.note{
+   color: $black;
+  font: {
+    size: 11px;
+    weight: 400;
+  }
+  @include roboto;
+  text: {
+    align: center;
+  }
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+section.contact{
+  width: 100%;
+  position: relative;
+  display: block;
+  article {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+  
+  }
+}
