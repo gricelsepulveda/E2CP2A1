@@ -288,6 +288,44 @@ section.contact{
     float: left;
     &:last-of-type{
       float: right;
+      p {
+        display: block;
+        margin-bottom: 5px;
+        color: $black;
+        font: { 
+          size: 10px;
+          weight: 400;
+        }
+        @include roboto;
+        text: {
+          align: left;
+        }
+      }
+    }
+    a {
+      font-size: 11px;
+      text-decoration: none;
+    }
+    ul {
+      display: block;
+      li {
+        display: block;
+        margin-bottom: 5px;
+        color: $black;
+        font: { 
+          size: 10px;
+          weight: 400;
+        }
+        @include roboto;
+        text: {
+          align: left;
+        }
+        a {
+          font-size: 11px;
+          text-decoration: none;
+          color: $black;
+        }
+      }
     }
   }
 }
@@ -322,6 +360,7 @@ span.footer-span{
     size: 10px;
     weight: 300;
   }
+  margin-left:  30px;
   letter-spacing: 2px;
   @include roboto;
   text: {
@@ -329,4 +368,22 @@ span.footer-span{
     transform: uppercase;
   }
   display: block;
+}
+
+button.contact-button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  height: 35px;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $white;
+  border: 1px solid gray;
+  cursor: pointer;
+  color: $black;
+  font: {
+    size: 14px;
+    weight: 500;
+  }
 }
